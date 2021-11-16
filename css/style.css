@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Generella klasser */
+
+.no-bullets {
+  list-style-type: none; /* Tar bort punkterna från ul */
+}
+
+#navBar {
+  height: 175px;
+  background-color: #f9d1b5;
+}
+
+.navBarList {
+  display: flex;
+  justify-content: space-between;
+  height: 175px;
+}
+
+.navBarItems {
+  text-align: center;
+  width: 250px;
+}
+
+.navBarItems:hover {
+  background-color: #e9b691;
+  cursor: pointer;
+}
+
+/* Texten som visas i navbaren */
+.navBarItemParagraphs {
+  height: 100%;
+  line-height: 175px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: presicav;
+  color: black;
+}
+
+#logoImg {
+  margin-top: 25px;
+  height: 125px;
+}
+
+#hboLogoImg {
+  height: 100px;
+  margin-top: 37.5px;
+}
+
+.navBarLink {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+
+
+h1 {
+  font-family: presicav;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 16px;
+}
+
+p {
+  font-family: open sans;
+  font-size: 20px;
+}
+
+h2 {
+  padding: 50px;
+  font-family: presicav;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* All styling för dropdownen */
+
+#dropdownMenu {
+  display: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+.dropdownMenuBar {
+  position: absolute;
+  height: 12px;
+  border-radius: 8px;
+  background-color: black;
+  width: 66px;
+  top: 32px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 250px;
+  font-size: 20px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 125px;
+  right: -10vw;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: presicav;
+  font-size: 20px;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* Koden för footern */
+
+footer{
+  height: 200px;
+  background-color: #707070;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* Länken till HBO */
+
+#footerLink {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: presicav;
+  font-size: 30px;
+}
+
+#backToTop {
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: presicav;
+  font-size: 20px;
+}
+
+#resizeWindow {
+  display: none;
+}
+
+
+
+/*
+Olika animationer och klasser som animerar
+ */
+
+ .hide {
+  display: none;
+}
+
+/* Show används för att animera in Dropdown menyn från sidan*/
+.show {
+  display: block;
+  animation: showMenuDropdown 0.7s;
+}
+
+@keyframes showMenuDropdown {
+  from {right: calc(-10vw - 250px);}
+  to {right: -10vw;}
+}
+
+/* Exit används för att animera ut dropdown menyn */
+.exit {
+  display: block;
+  animation: exitMenuDropdown 0.7s;
+}
+
+@keyframes exitMenuDropdown {
+  from {right: -10vw; opacity: 100%;}
+  to {right: calc(-10vw - 250px); opacity: 0%;}
+}
+
+/* Alla animationerna nedan är komplicerade och används för att animera de 3 delarna av meny-knappen */
+.animate-dropdownMenuTopBar {
+  top: 32px;
+  transform: rotate(45deg);
+  animation: animate-dropdownMenuTopBar 0.7s;
+}
+
+@keyframes animate-dropdownMenuTopBar {
+  from {top: 5px; transform: rotate(0deg);}
+  to {top: 32px; transform: rotate(45deg);}
+}
+
+.animate-dropdownMenuBottomBar {
+  top: 32px;
+  transform: rotate(-45deg);
+  animation: animate-dropdownMenuBottomBar 0.7s;
+}
+
+@keyframes animate-dropdownMenuBottomBar {
+  from {top: 59px; transform: rotate(0deg);}
+  to {top: 32px; transform: rotate(-45deg);}
+}
+
+.animateOut-dropdownMenuTopBar {
+  animation: animateOut-dropdownMenuTopBar 0.3s;
+}
+
+@keyframes animateOut-dropdownMenuTopBar {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(0deg);}
+}
+
+.animateOut-dropdownMenuBottomBar {
+  animation: animateOut-dropdownMenuBottomBar 0.3s;
+}
+
+@keyframes animateOut-dropdownMenuBottomBar {
+  from {transform: rotate(-45deg);}
+  to {transform: rotate(0deg);}
+}
+
+
+
+
+/* Huvud sidan */
+
+#frontPageImageContainer {
+  padding: 50px;
+}
+
+#imageOfVulture {
+  width: 100%;
+}
+
+#watchOnHBO {
+  padding-bottom: 50px;
+}
+
+/* Klasser som stylar allt förutom index.html */
+
+.firstParagraph {
+  padding: 50px 16.7%;
+}
+
+.firstImg {
+  width: 100%;
+  padding: 25px 16.7%;
+}
+
+.secondParagraph {
+  padding: 0px 16.7%;
+}
+
+/* Plot sidan */
+
+#charactersParagraph {
+  margin-bottom: 100px;
+}
+
+/* Musik sidan */
+
+#robotPianoImg {
+  width: 100%;
+  padding: 75px 16.7% 100px;
+}
+
+/* Meaning sidan */
+
+#robotProductionImg {
+  padding: 0px 16.7% 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  /* Generella klasser */
+
+  .navBarItems {
+    display: none;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  h1 {
+    font-size: 45px;
+    letter-spacing: 13px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #footerLink {
+    font-size: 22px;
+  }
+
+  #backToTop {
+    font-size: 16px;
+  }
+
+  /* Klasser som stylar allt förutom index.html */
+
+  .firstParagraph {
+    padding: 50px 0px;
+  }
+
+  .firstImg {
+    width: 100%;
+    padding: 25px 0px;
+  }
+
+  .secondParagraph {
+    padding: 0px;
+  }
+
+  /* Musik sidan */
+
+  #robotPianoImg {
+    padding: 75px 0px 100px;
+  }
+
+  /* Meaning sidan */
+
+  #robotProductionImg {
+    padding: 0px 0px 100px;
+  }
+
+  /* Visar och animerar dropdownen */
+
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    right: 10%;
+  }
+
+  #dropdownMenu {
+    display: inline-block;
+    height: 76px;
+    width: 76px;
+    padding: 5px;
+  }
+
+  .dropdownMenuBar {
+    transition: top 1s;
+    transition-timing-function: ease;
+  }
+
+  .dropdownMenuTopBar {
+    top: 5px;
+    animation: animatedropdownMenuTopBar 0.55s;
+  }
+
+  .dropdownMenuBottomBar {
+    top: 59px;
+    animation: animatedropdownMenuBottomBar 0.55s;
+  }
+
+  @keyframes animatedropdownMenuTopBar {
+    from {top: 32px;}
+    to {top: 5px;}
+  }
+
+  @keyframes animatedropdownMenuBottomBar {
+    from {top: 32px;}
+    to {top: 59px;}
+  }
+}
+
+/* Gömmer hela sidan om skärmen blir för liten */
+@media screen and (max-width: 600px){
+  #hideContainer {
+    display: none;
+  }
+
+  #resizeWindow {
+    display: block;
+  }
+}

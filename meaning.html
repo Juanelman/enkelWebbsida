@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westworld</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" href="https://use.typekit.net/qem6noy.css">
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+
+  <h2 id="resizeWindow">Window too small. Please resize </h2>
+
+  <!-- hideContainer används för att gömma hela sidan när webbsidan blir för liten  -->
+
+  <div id="hideContainer">
+    <div class="container">
+      
+      <!-- här är allt som ingår i navbaren -->
+      
+      <nav id="navBar">
+
+        <ul class="navBarList no-bullets">
+          <li class="navBarItems" id="logo">
+            <a class="navBarLink" href="index.html">
+              <img id="logoImg" src="https://seeklogo.com/images/W/westworld-logo-0F4B6BF045-seeklogo.com.png" alt="Westworld logo">
+            </a>
+          </li>
+          
+          <li class="navBarItems" id="plot">
+            <a class="navBarLink" href="plot.html">
+              <p class="navBarItemParagraphs">PLOT</p>
+            </a>
+          </li>
+
+          <li class="navBarItems" id="music">
+            <a class="navBarLink" href="music.html">
+              <p class="navBarItemParagraphs">MUSIC</p>
+            </a>
+          </li>
+
+          <li class="navBarItems" id="meaning">
+            <a class="navBarLink" href="meaning.html">
+              <p class="navBarItemParagraphs">MEANING</p>
+            </a>
+          </li>
+
+          <li class="navBarItems" id="hboLogo">
+            <a class="navBarLink" href="https://www.hbo.com/westworld" target="blank">
+              <img id="hboLogoImg" src="https://upload.wikimedia.org/wikipedia/commons/a/af/HBO_Nordic_logo.svg" alt="HBO logo">
+            </a>
+          </li>
+        </ul>
+
+        <!-- den här koden är för dropdownen. Listan med items är delarna av knappen. Det är de som sedan animeras. -->
+
+        <div class="dropdown">
+          <div id="dropdownMenu" class="dropbtn" onclick="showDropdown('menuDropdown')">
+            <ul class="no-bullets" id="dropdownMenuBars">
+              <li class="dropdownMenuBar dropdownMenuTopBar" id="dropdownMenuTopBar"></li>
+              <li class="dropdownMenuBar dropdownMenuMiddleBar" id="dropdownMenuMiddleBar"></li>
+              <li class="dropdownMenuBar dropdownMenuBottomBar" id="dropdownMenuBottomBar"></li>
+            </ul>
+          </div>
+
+          <div class="dropdown-content" id="menuDropdown">
+            <a href="index.html">Westworld</a>
+            <a href="plot.html">Plot</a>
+            <a href="music.html">Music</a>
+            <a href="meaning.html">Meaning</a>
+          </div>
+        </div>      
+
+      </nav>
+
+      <!-- här finns all kod för den specifika sidan-->
+
+      <h1>MEANING</h1>
+      
+      <p class="firstParagraph">Many of the questions raised in westworld have a very deep existential meaning.
+        For example if AI-life should be considered life, and what would happen it came to be.</p>
+
+      <img class="firstImg" id="robotProductionImg" src="http://westworldwatchers.com/wp-content/uploads/2017/02/Westworld-Host-Being-Manufactured.jpg" alt="Picture of robot being built">
+
+      <footer>
+        <a id="footerLink" target="_blank" href="https://www.hbo.com/westworld">Watch the entire series at: HBO.com</a>
+        <a id="backToTop" href="#navBar">Back to top</a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
