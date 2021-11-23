@@ -34,7 +34,8 @@
 }
 
 /* Texten som visas i navbaren */
-.navBarItemParagraphs {
+.navBarLink {
+  display: block;
   height: 100%;
   line-height: 175px;
   text-align: center;
@@ -42,6 +43,7 @@
   font-weight: bold;
   font-family: presicav;
   color: black;
+  text-decoration: none;
 }
 
 #logoImg {
@@ -53,15 +55,6 @@
   height: 100px;
   margin-top: 37.5px;
 }
-
-.navBarLink {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
-}
-
-
 
 h1 {
   font-family: presicav;
